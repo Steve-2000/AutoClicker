@@ -1,0 +1,29 @@
+{
+  "name": "edge-auto-clicker",
+  "version": "1.0.0",
+  "description": "Visual auto-clicker for Microsoft Edge tabs via CDP",
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "concurrently \"vite\" \"wait-on http://localhost:5173 && electron .\"",
+    "build": "vite build",
+    "preview": "vite preview",
+    "electron": "electron .",
+    "start": "npm run dev"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "concurrently": "^8.2.2",
+    "electron": "^28.2.0",
+    "electron-builder": "^24.9.1",
+    "vite": "^5.0.11",
+    "wait-on": "^7.2.0"
+  },
+  "allowScripts": {
+    "electron@28.3.3": true,
+    "esbuild@0.21.5": true
+  }
+}
